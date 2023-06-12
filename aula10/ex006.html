@@ -6,7 +6,7 @@
     <title>Eventos DOM</title>
     <style>
         .area{
-            background-color: blueviolet;
+            background-color: #8a2be3;
             color: white;
 
             width: 100%;
@@ -35,33 +35,36 @@
     </style>
 </head>
 <body>
-        <div class="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        <div class="area">
             <p>Interaja...</p>
         </div>
 
         <script>
-            function clicar(){
-                var a = document.getElementsByTagName('p')[0]
 
+            var a = document.getElementsByClassName('area')[0]
+            var a = document.getElementsByTagName('p')[0]
+
+            a.addEventListener('click', clicar)
+            a.addEventListener('mouseenter', entrar)
+            a.addEventListener('mouseout', sair)
+
+            function clicar(){
+               
                 a.innerHTML = 'Clicou!'
-             
+                a.style.background = 'red'
             }
 
             function entrar() {
-                var entrar = document.getElementsByClassName('area')[0]
-
-                entrar.style.background = 'blue'
+                a.style.background = 'blue'
             }
 
             
             function sair() {
+               
+               
 
-                var sair = document.getElementsByClassName('area')[0]
-
-                sair.style.background = 'red'
-                var p = document.getElementsByTagName('p')[0]
-
-                p.innerHTML = 'Muito Bem!'
+                a.innerHTML = 'Muito Bem!'
+                a.style.background = 'green'
             }
 
         </script>
