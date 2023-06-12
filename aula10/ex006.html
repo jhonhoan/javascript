@@ -35,8 +35,35 @@
     </style>
 </head>
 <body>
-        <div class="area">
+        <div class="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
             <p>Interaja...</p>
         </div>
+
+        <script>
+            function clicar(){
+                var a = document.getElementsByTagName('p')[0]
+
+                a.innerHTML = 'Clicou!'
+             
+            }
+
+            function entrar() {
+                var entrar = document.getElementsByClassName('area')[0]
+
+                entrar.style.background = 'blue'
+            }
+
+            
+            function sair() {
+
+                var sair = document.getElementsByClassName('area')[0]
+
+                sair.style.background = 'red'
+                var p = document.getElementsByTagName('p')[0]
+
+                p.innerHTML = 'Muito Bem!'
+            }
+
+        </script>
 </body>
 </html>
