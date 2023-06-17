@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JavaScript</title>
+</head>
+<body>
+    <h1>Você é Brasileiro ou Americano?</h1>
+   <input type="text" name="text1" id="text1">
+
+    
+    <input type="button" value="Verificar" onclick="enviar()">
+
+    <div id="res"></div>
+
+    <script>
+        function enviar() {
+
+            var tx1 = document.getElementById('text1')
+            var res = document.getElementById('res')
+            var pais = String(tx1.value)
+
+            if (pais == 'Brasileiro'){
+                res.innerHTML = 'Então você é do Brasil!'
+            }else{
+                res.innerText = 'Estrangeiro'
+            }
+            if (pais == 'Americano'){
+                res.innerHTML = 'Então você é dos EUAl!'
+            }
+        }
+    </script>
+</body>
+</html>
